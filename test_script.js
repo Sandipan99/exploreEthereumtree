@@ -7,10 +7,10 @@ var RLP = require('rlp');
 var assert = require('assert');
 
 //Connecting to the leveldb database
-var db = levelup(leveldown('/home/sandipan/.ethereum/geth/chaindata'));
+var db = levelup('/home/sandipan/.ethereum/geth/chaindata',{db: leveldown});
 
 //Adding the "stateRoot" value from the block so that we can inspect the state root at that block height.
-var root = '0x88e96d4537bea4d9c05d12549907b32561d3bf31f45aae734cdc119f13406cb6';
+var root = '0xf3d177c2987af6da0f1e96fd08eb50cd7fad346957a7fa6b86c86d90371f0b19';
 
 //Creating a trie object of the merkle-patricia-tree library
 var trie = new Trie(db, root);
