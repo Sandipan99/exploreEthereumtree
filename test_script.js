@@ -7,7 +7,7 @@ var RLP = require('rlp');
 var assert = require('assert');
 
 //Connecting to the leveldb database
-var db = level('/home/sandipan/.ethereum/geth/chaindata');
+var db = levelup(leveldown('/home/sandipan/.ethereum/geth/chaindata'));
 
 //Adding the "stateRoot" value from the block so that we can inspect the state root at that block height.
 var root = '0x88e96d4537bea4d9c05d12549907b32561d3bf31f45aae734cdc119f13406cb6';
