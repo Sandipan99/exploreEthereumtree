@@ -18,6 +18,7 @@ var trie = new Trie(db, root);
 //Creating a nodejs stream object so that we can access the data
 var stream = trie.createReadStream()
 
+console.log('Hello world')
 //Turning on the stream (because the node js stream is set to pause by default)
 stream.on('data', function (data){
   //printing out the keys of the "state trie"
