@@ -10,7 +10,7 @@ var assert = require('assert');
 var db = level('/home/sandipan/.ethereum/geth/chaindata');
 
 //Adding the "stateRoot" value from the block so that we can inspect the state root at that block height.
-var root = '';
+var root = '0x88e96d4537bea4d9c05d12549907b32561d3bf31f45aae734cdc119f13406cb6';
 
 //Creating a trie object of the merkle-patricia-tree library
 var trie = new Trie(db, root);
